@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springCollection.List.StudentListCI"
+		name="student1">
+		<constructor-arg value="Ram">
+		</constructor-arg>
+
+		<constructor-arg>
+			<list>
+				<value>8938937480</value>
+				<value>7349457566</value>
+				<value>3748665797</value>
+				<value>9348008757</value>
+			</list>
+
+		</constructor-arg>
+
+	</bean>
+
+</beans>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Standalone list -->
+	<util:list list-class="java.util.LinkedList" id="myfriend">
+		<value>Rohit</value>
+		<value>Amit</value>
+		<value>Sohan</value>
+		<value>Dev</value>
+
+	</util:list>
+	
+	<!-- Standalone Map -->
+	<util:map map-class="java.util.HashMap" id="CourseFee">
+		<entry key="Pyhton" value="803" />
+		<entry key="Java" value="745" />
+		<entry key="Angular" value="675" />
+		<entry key="NodeJS" value="900" />
+	</util:map>
+	<!-- Standalone Properties -->
+	<util:properties id="prop">
+		<prop key="WebSite">www.jdbc.com</prop>
+		<prop key="UserName">Rahul</prop>
+		<prop key="Password">rahul123</prop>
+		<prop key="Captcha">Hy386u</prop>
+	</util:properties>
+	<bean class="com.StandAloneCollections.List.Person" name="p">
+		<!-- <property name="friends"> <ref bean="myfriend"/> </property> -->
+
+		<!-- Use as property -->
+		<property name="friends" ref="myfriend" />
+		<property name="fee" ref="CourseFee" />
+		<property name="property" ref="prop" />
+
+	</bean>
+
+</beans>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config></context:annotation-config>
+
+	<!-- autowiring using byName (put the object value by searching name ex-patient) -->
+	<bean class="com.AutoWiring.Xml.Patient" name="patient">
+
+		<property name="pName">
+			<value>Rajiv</value>
+		</property>
+
+		<property name="disease">
+			<value>Fever</value>
+		</property>
+
+	</bean>
+	<!-- autowiring using byName (put the object value by searching name ex-patient) -->
+	<bean class="com.AutoWiring.Xml.Doctor" name="doctor"
+		autowire="byName">
+
+		<property name="name">
+			<value>Dr.Rahul</value>
+		</property>
+
+		<property name="dept">
+			<value>Gernal</value>
+		</property>
+
+	</bean>
+	
+
+	
+	<!-- <bean class="com.AutoWiring.Xml.Patient" name="patient">
+
+		<property name="pName">
+			<value>Rajiv</value>
+		</property>
+
+		<property name="disease">
+			<value>Fever</value>
+		</property>
+
+	</bean>
+	autowiring using Constructor
+	<bean class="com.AutoWiring.Xml.Doctor" name="doctor"
+		autowire="byName">
+
+		<property name="name">
+			<value>Dr.Rahul</value>
+		</property>
+
+		<property name="dept">
+			<value>Gernal</value>
+		</property>
+
+	</bean> -->
+	
+	<!-- autowiring using byType (put the object value based on its type ex-Patient class type) 
+	<bean class="com.AutoWiring.Xml.Patient" name="patient1">
+
+		<property name="pName">
+			<value>Aman</value>
+		</property>
+
+		<property name="disease">
+			<value>Accident</value>
+		</property>
+
+	</bean>
+	autowiring using byName ((put the object value based on its type ex-Patient class type)
+	<bean class="com.AutoWiring.Xml.Doctor" name="doctor1"
+		autowire="byType">
+
+		<property name="name">
+			<value>Dr.Deepak</value>
+		</property>
+
+		<property name="dept">
+			<value>Surgeon</value>
+		</property>
+
+	</bean> -->
+
+</beans>

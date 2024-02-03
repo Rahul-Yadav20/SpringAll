@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config></context:annotation-config>
+
+	<!-- You can take any value for name attribute like tempPatient because 
+		it is using type a annotation -->
+	<bean class="com.AutoWiring.Qualifier.Patient" name="patient">
+
+		<property name="pName">
+			<value>Rajiv</value>
+		</property>
+
+		<property name="disease">
+			<value>Fever</value>
+		</property>
+
+	</bean>
+
+	<bean class="com.AutoWiring.Qualifier.Patient" name="patient1">
+
+		<property name="pName">
+			<value>Gandhi</value>
+		</property>
+
+		<property name="disease">
+			<value>Mental</value>
+		</property>
+
+	</bean>
+	<!-- autowiring using Annotation -->
+	<bean class="com.AutoWiring.Qualifier.Doctor" name="doctor">
+
+		<property name="name">
+			<value>Dr.Rahul</value>
+		</property>
+
+		<property name="dept">
+			<value>Gernal</value>
+		</property>
+
+	</bean>
+
+</beans>
+
+
+
+
+
+

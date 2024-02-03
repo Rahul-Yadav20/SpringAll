@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.Reference.ref.Employee" name="emp1">
+		<property name="id" value="80382"></property>
+
+		<property name="name" value="john"></property>
+		
+		<property name="address">
+			<ref bean="AddRef"></ref>
+		</property>
+		
+		<!-- Using ref as property -->
+		<property name="address" ref="AddRef">
+			
+		</property>
+		
+		
+		
+		
+
+	</bean> 
+	
+	<!--Using p Schema  -->
+	<!-- <bean class="com.springcore.Reference.ref.Employee" name="emp1" p:id="84784" p:name="Shyam" p:address-ref="AddRef"/> -->
+	<bean class="com.springcore.Reference.ref.EmployeeAdd" name="AddRef">
+		<property name="address">
+			<value>Dehli</value>
+			
+		</property>
+	</bean>
+</beans>

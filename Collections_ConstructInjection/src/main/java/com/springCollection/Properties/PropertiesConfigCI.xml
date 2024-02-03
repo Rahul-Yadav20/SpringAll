@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springCollection.Properties.StudentPropertiesCI"
+		name="student1">
+		<constructor-arg value="Ram"></constructor-arg>
+
+
+
+		<constructor-arg>
+			<props>
+				<prop key="Id">989</prop>
+				<prop key="Address">Dehli</prop>
+				<prop key="Phone">993847955</prop>
+				<prop key="DOB">19/02/2000</prop>
+			</props>
+		</constructor-arg>
+
+
+	</bean>
+
+</beans>

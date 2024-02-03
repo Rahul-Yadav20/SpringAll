@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+	
+	<!-- <servlet>
+		<servlet-name>abc</servlet-name>
+		<servlet-class>com.FirstServlet.FirstApp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>abc</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>square</servlet-name>
+		<servlet-class>com.FirstServlet.SquareServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>square</servlet-name>
+		<url-pattern>/sq</url-pattern>
+	</servlet-mapping> -->
+	
+	<servlet>
+		<servlet-name>form</servlet-name>
+		<servlet-class>com.Form.RegisForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>form</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+</web-app>
